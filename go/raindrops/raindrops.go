@@ -4,7 +4,8 @@ import "strconv"
 
 const testVersion = 2
 
-func factorize(i int) []int {
+func Factorize(i int) []int {
+	// Takes a number and breaks it into all factors of that number as an Array
 	var factors []int
 
 	for f := 1; i >= f; f++ {
@@ -16,7 +17,8 @@ func factorize(i int) []int {
 }
 
 func Convert(str int) (statement string) {
-	for _, i := range factorize(str) {
+	// Converts a statement into a combination of PlingPlangPlong and num depending on factors
+	for _, i := range Factorize(str) {
 		switch i {
 		case 3:
 			statement = statement + "Pling"
