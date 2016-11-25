@@ -18,11 +18,12 @@ func factorize(i int) []int {
 func Convert(str int) string {
 	statement := ""
 	for _, i := range factorize(str) {
-		if i == 3 {
+		switch i {
+		case 3:
 			statement = statement + "Pling"
-		} else if i == 5 {
+		case 5:
 			statement = statement + "Plang"
-		} else if i == 7 {
+		case 7:
 			statement = statement + "Plong"
 		}
 	}
