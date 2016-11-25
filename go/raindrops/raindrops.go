@@ -15,8 +15,7 @@ func factorize(i int) []int {
 	return factors
 }
 
-func Convert(str int) string {
-	statement := ""
+func Convert(str int) (statement string) {
 	for _, i := range factorize(str) {
 		switch i {
 		case 3:
@@ -31,7 +30,7 @@ func Convert(str int) string {
 	if len(statement) == 0 {
 		statement = strconv.Itoa(str)
 	}
-	return statement
+	return
 }
 
 // The test program has a benchmark too.  How fast does your Convert convert?
