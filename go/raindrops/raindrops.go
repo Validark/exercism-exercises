@@ -29,7 +29,7 @@ func Convert(str int) string {
 	}
 
 	if len(statement) == 0 {
-		statement = statement + strconv.Itoa(str)
+		statement = strconv.Itoa(str)
 	}
 	return statement
 }
