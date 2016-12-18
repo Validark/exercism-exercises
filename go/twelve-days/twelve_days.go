@@ -22,6 +22,7 @@ var verses = []verse{
 	{12, "On the twelfth day of Christmas my true love gave to me, twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."},
 }
 
+// Song rehearses all the verses from the beginning to the end.
 func Song() (s string) {
 
 	for _, r := range verses {
@@ -30,6 +31,7 @@ func Song() (s string) {
 	return
 }
 
+// Verse rehearses one specific verse.
 func Verse(v int) string {
 	return verses[v-1].expected
 }
