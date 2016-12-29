@@ -13,11 +13,9 @@ func Triangle(row int) (t [][]int) {
 	for n := 0; n < row; n++ {
 		r := make([]int, n+1)
 		for c := 0; c <= n; c++ {
-			// top := factorial(n)
-			// bot := factorial(c) * factorial(n-c)
-			// r[c] = top / bot
-			left := (c - 1) / n
-			right := (c - 1) / (n - 1)
+			// TODO use more efficient simplified formula
+			left := factorial(n)
+			right := factorial(c) * factorial(n-c)
 			r[c] = left + right
 		}
 		t = append(t, r)
